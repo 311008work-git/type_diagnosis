@@ -163,7 +163,7 @@ function shareOnX() {
 
     // 2. ポストする文章を組み立てる
     // \n は改行です
-    const postText = `私のタイプは…\n【 ${titleText} 】でした！\n\n${descText.substring(0, 50)}...\n\n#ポケモンタイプ診断`;
+    const postText = `私のタイプは…\n【 ${titleText} 】でした！\n\n#ポケモンタイプ診断`;
 
     // 3. あなたのサイトURL（公開後にここを書き換えてください！）
     const siteUrl = "https://311008work-git.github.io/type_diagnosis/"; 
