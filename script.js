@@ -166,7 +166,7 @@ function shareOnX() {
     const postText = `私のタイプは…\n【 ${titleText} 】でした！\n\n${descText.substring(0, 50)}...\n\n#ポケモンタイプ診断`;
 
     // 3. あなたのサイトURL（公開後にここを書き換えてください！）
-    const siteUrl = "https://あなたのサイトのURL.com"; 
+    const siteUrl = "https://311008work-git.github.io/type_diagnosis/"; 
 
     // 4. Xの投稿画面を開くURLを作成
     // encodeURIComponent は、日本語や記号をURLで使える形式に変換するおまじないです
