@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+button:hover {
+    background-color: #cc4444;
+}
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-names {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+/* ベースのデザイン */
+.type-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* IDごとの色指定（シンプルになりました！） */
+.type1  { background-color: #b3b3a6; } /* ノーマル */
+.type2  { background-color: #ee5930; } /* ほのお */
+.type3  { background-color: #6390F0; } /* みず */
+.type4  { background-color: #7AC74C; } /* くさ */
+.type5  { background-color: #F7D02C; } /* でんき */
+.type6  { background-color: #96D9D6; } /* こおり */
+.type7  { background-color: rgb(194, 55, 40); } /* かくとう */
+.type8  { background-color: #A33EA1; color: #ffffff; } /* どく */
+.type9  { background-color: rgb(190, 146, 33); } /* じめん */
+.type10 { background-color: #8fe1f3; } /* ひこう */
+.type11 { background-color: #f955cd; } /* エスパー */
+.type12 { background-color: #A6B91A; } /* むし */
+.type13 { background-color: #92b636; } /* いわ */
+.type14 { background-color: #735797; color: #ffffff; } /* ゴースト */
+.type15 { background-color: #6F35FC; color: #ffffff; } /* ドラゴン */
+.type16 { background-color: #443b35; color: #ffffff; } /* あく */
+.type17 { background-color: #B7B7CE; } /* はがね */
+.type18 { background-color: #D685AD; } /* フェアリー */
+
+/* === X (Twitter) シェアボタン === */
+.share-btn-x {
+    background-color: #000000; /* Xのブランドカラー */
+    color: #ffffff;
+    font-weight: bold;
+    font-family: sans-serif; /* Xのロゴっぽく */
+    border: 1px solid #333;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.share-btn-x:hover {
+    background-color: #333333; /* ホバー時は少し明るく */
+}
+
+.share-btn-x:active {
+    transform: scale(0.98); /* クリック時に少し沈む演出 */
+}
+/* ==========================================
+   ゲーム風 選択肢ボタンの装飾
+   ========================================== */
+
+/* ボタン本体の基本設定（既存のものに追記・調整してください） */
+#options button {
+    position: relative; /* ★重要：これを基準に▼を配置します */
+    /* ↓ 文字が▼に重ならないように余白を調整 */
+    padding: 15px 40px 15px 20px; 
+    
+    /* 既存のデザイン（参考） */
+    color: #555;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* ホバー時の「▼」を作成する疑似要素 */
+#options button:hover::after {
+    content: "▼";          /* 表示する文字 */
+    position: absolute;    /* 絶対配置 */
+    right: 15px;           /* 右からの距離 */
+    bottom: 10px;          /* 下からの距離 */
+    
+    color: #ff5555;        /* ▼の色（赤など目立つ色に） */
+    font-size: 14px;       /* ▼の大きさ */
+    animation: pixel-move 1s step-end infinite;
+}
+
+/* 「カチカチ」動くアニメーションの定義 */
+@keyframes pixel-move {
+    0% {
+        transform: translateY(0);     /* 0%〜49% まではこの位置で静止 */
+    }
+    50% {
+        transform: translateY(4px);   /* 50%〜99% まではこの位置（4px下）で静止 */
+    }
+    /* 100%で0%に戻る瞬間にパッと戻ります */
+}

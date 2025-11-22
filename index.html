@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケモンタイプ診断 | あなたの本性を見抜きます</title>
+    <meta name="description" content="15問の質問に答えるだけで、あなたの性格にぴったりのポケモンタイプを診断します。">
+    <meta property="og:url" content="【ここにサイトの公開URL（例: https://my-pokemon-diag.netlify.app/）】">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ポケモンタイプ診断">
+    <meta property="og:description" content="15問の質問に答えるだけで、あなたの性格にぴったりのポケモンタイプを診断します。">
+    <meta property="og:site_name" content="ポケモンタイプ診断">
+    <meta property="og:image" content="【ここにサイトの公開URL】/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="start-screen">
+            <h1>ポケモンタイプ診断</h1>
+            <p>あなたの隠された本性（タイプ）を見抜きます。</p>
+            <button onclick="startQuiz()">診断を始める</button>
+        </div>
+
+        <div id="quiz-screen" style="display:none;">
+            <h2 id="question-text">ここに質問が表示されます</h2>
+            <div id="options" class="options-grid">
+                </div>
+        </div>
+
+        <div id="result-screen" style="display:none;">
+            <h2>診断結果</h2>
+            <h1 id="result-title">タイプ名</h1>
+            
+            <hr>
+            
+            <h3 id="pokemon-msg"></h3>
+            <p id="pokemon-list" class="pokemon-names"></p>
+            <button class="share-btn-x" onclick="shareOnX()">
+                𝕏 で結果をポストする
+            </button>
+            <button onclick="location.reload()">もう一度診断する</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
