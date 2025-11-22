@@ -79,7 +79,7 @@ function displayResultContent(type1, type2) {
         // 単独タイプ
         const data = typeResults[type1];
         resultTitle.innerHTML = resultTitle.innerHTML = `<span class="type-badge type${data.id}">${type1}</span> タイプ`;
-        resultDesc.innerText = data.desc;
+        // resultDesc.innerText = data.desc;
     } else {
         // 複合タイプ（キャッチコピーなどを合体させる簡易版）
         const data1 = typeResults[type1];
@@ -159,7 +159,7 @@ function shareOnX() {
     // 1. 画面から診断結果のテキストを取得
     // ※ innerTextを使うことで、HTMLタグ（<span>など）を除去した純粋な文字だけ取れます
     const titleText = document.getElementById('result-title').innerText;
-    const descText = document.getElementById('result-desc').innerText;
+    // const descText = document.getElementById('result-desc').innerText;
 
     // 2. ポストする文章を組み立てる
     // \n は改行です
